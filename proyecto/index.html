@@ -7,6 +7,223 @@
     <title>Vite App</title>
   </head>
   <body>
+      <header>
+    <h1>NeighMarket</h1>
+    <nav>
+      <button onclick="mostrarSeccion('inicio')">Inicio</button>
+      <button onclick="mostrarSeccion('tiendas')">Tiendas</button>
+      <button onclick="mostrarSeccion('sugerencias')">Sugerencias</button>
+    <button onclick="mostrarSeccion('novedades')">Novedades</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección INICIO -->
+    <section id="inicio" class="seccion">
+      <h2>Bienvenido</h2>
+      <p>Conecta con los negocios de tu barrio. Esta plataforma ayuda a los comerciantes de Bosa a darse a conocer y vender sus productos fácilmente.</p>
+    
+      <div class="sobre-nosotros">
+        <h3>Sobre Nosotros</h3>
+        <p>NeighMarket nació en 2023 con el objetivo de digitalizar el comercio local de los barrios populares de Bogotá. Somos un grupo de vecinos, desarrolladores y comerciantes que creemos en el poder de lo local. Nuestro equipo está ubicado en Bosa Centro y trabajamos todos los días para hacer más visible el trabajo de los pequeños negocios.</p>
+      </div>
+    
+      <div class="mision">
+        <h3>Misión</h3>
+        <p>Fomentar el crecimiento del comercio barrial brindando herramientas digitales accesibles, seguras y diseñadas para la comunidad.</p>
+      </div>
+    
+      <div class="vision">
+        <h3>Visión</h3>
+        <p>Convertirnos en la plataforma líder de comercio comunitario en Colombia, conectando a los vecinos con productos locales de calidad sin intermediarios.</p>
+      </div>
+    
+      <div class="contacto">
+        <h3>Contáctenos</h3>
+        <p>📍 Dirección: Calle 65B #78-22, Bosa Centro, Bogotá</p>
+        <p>📞 Teléfono: (601) 389 4422</p>
+        <p>📧 Correo: contacto@neighmarket.com</p>
+        <p>🕒 Horario de atención: Lunes a Sábado de 8:00 a.m. a 6:00 p.m.</p>
+      </div>
+    
+      <div class="testimonios">
+        <h3>Lo que dicen nuestros usuarios</h3>
+        <p>"Gracias a NeighMarket ahora vendo más empanadas que nunca. ¡Hasta me encargan desde otras cuadras!" — Doña Fabiola, Empanadas El Barrio</p>
+        <p>"Pude encontrar frutas frescas sin salir de mi manzana. ¡Es como el mercado, pero en el celular!" — Julián R., vecino de Bosa</p>
+      </div>
+    </section>
+    
+
+    <!-- Sección TIENDAS -->
+    <section id="tiendas" class="seccion oculto">
+                  <div class="tienda">
+                    <div class="info-tienda">
+                      <img src="ruta-de-la-imagen.jpg" alt="Nombre Tienda">
+                      <div>
+                        <h3>Miscelánea Doña Rosa</h3>
+                        <p>Dirección: Calle 23 Sur #85B - Bosa</p>
+                        <p>Horarios: 8am - 8pm</p>
+                        <p>Teléfono: 312 123 4567</p>
+                        <button class="btn-ingresar" onclick="verProductos('donaRosa')">Ver productos</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sección de productos -->
+                <div id="productos-donaRosa" class="productos" style="display: none;">
+                  <h2>Productos de Miscelánea Doña Rosa</h2>
+                  <ul class="lista-estilizada">
+                    <li>Arroz x 1Kg</li>
+                    <li>Jabón en barra</li>
+                    <li>Detergente líquido</li>
+                    <!-- Agrega más productos aquí -->
+                  </ul>
+                  <button class="btn-volver" onclick="volverAtras()">Volver</button>
+                </div>
+
+
+
+                <!-- Tienda 2 -->
+                <div class="tienda">
+                  <div class="info-tienda">
+                    <img src="panaderia-santa.jpg" alt="Panadería Santa Clara">
+                    <div>
+                      <h3>Panadería Santa Clara</h3>
+                      <p>Dirección: Carrera 12 #45 - Kennedy</p>
+                      <p>Horarios: 6am - 9pm</p>
+                      <p>Teléfono: 310 456 7890</p>
+                      <button class="btn-ingresar" onclick="verProductos('santaClara')">Ver productos</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="productos-santaClara" class="productos" style="display: none;">
+                  <h2>Productos de Panadería Santa Clara</h2>
+                  <ul class="lista-estilizada">
+                    <li>Pan aliñado</li>
+                    <li>Almojábanas</li>
+                    <li>Galletas artesanales</li>
+                  </ul>
+                  <button class="btn-volver" onclick="volverAtras()">Volver</button>
+                </div>
+
+                <!-- Tienda 3 -->
+                <div class="tienda">
+                  <div class="info-tienda">
+                    <img src="tienda-juliana.jpg" alt="Tienda Juliana">
+                    <div>
+                      <h3>Tienda Juliana</h3>
+                      <p>Dirección: Calle 10 #30A - Suba</p>
+                      <p>Horarios: 7am - 10pm</p>
+                      <p>Teléfono: 301 987 6543</p>
+                      <button class="btn-ingresar" onclick="verProductos('juliana')">Ver productos</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="productos-juliana" class="productos" style="display: none;">
+                  <h2>Productos de Tienda Juliana</h2>
+                  <ul class="lista-estilizada">
+                    <li>Huevos por docena</li>
+                    <li>Arequipe</li>
+                    <li>Yogurt natural</li>
+                  </ul>
+                  <button class="btn-volver" onclick="volverAtras()">Volver</button>
+                </div>
+
+                <!-- Tienda 4 -->
+                <div class="tienda">
+                  <div class="info-tienda">
+                    <img src="ferreteria-el-polo.jpg" alt="Ferretería El Polo">
+                    <div>
+                      <h3>Ferretería El Polo</h3>
+                      <p>Dirección: Av. Caracas #60 - Chapinero</p>
+                      <p>Horarios: 8am - 6pm</p>
+                      <p>Teléfono: 320 111 2222</p>
+                      <button class="btn-ingresar" onclick="verProductos('elPolo')">Ver productos</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="productos-elPolo" class="productos" style="display: none;">
+                  <h2>Productos de Ferretería El Polo</h2>
+                  <ul class="lista-estilizada">
+                    <li>Martillo</li>
+                    <li>Clavos x 100g</li>
+                    <li>Cinta aislante</li>
+                  </ul>
+                  <button class="btn-volver" onclick="volverAtras()">Volver</button>
+                </div>
+
+                <!-- Tienda 5 -->
+                <div class="tienda">
+                  <div class="info-tienda">
+                    <img src="verduleria-verde.jpg" alt="Verdulería Verde Esperanza">
+                    <div>
+                      <h3>Verdulería Verde Esperanza</h3>
+                      <p>Dirección: Calle 45 #78 - Engativá</p>
+                      <p>Horarios: 7am - 5pm</p>
+                      <p>Teléfono: 300 654 3210</p>
+                      <button class="btn-ingresar" onclick="verProductos('verdeEsperanza')">Ver productos</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="productos-verdeEsperanza" class="productos" style="display: none;">
+                  <h2>Productos de Verdulería Verde Esperanza</h2>
+                  <ul class="lista-estilizada">
+                    <li>Tomate x libra</li>
+                    <li>Lechuga crespa</li>
+                    <li>Zanahoria x libra</li>
+                  </ul>
+                  <button class="btn-volver" onclick="volverAtras()">Volver</button>
+                </div>
+
+      
+    </section>
+
+    
+
+    <!-- Sección SUGERENCIAS -->
+
+    <section id="sugerencias" class="seccion oculto">
+      <h2>Envíanos tu sugerencia</h2>
+      <form id="form-sugerencia">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="respuesta"></p>
+    </section>
+
+       <!-- Novedades -->
+
+       <section id="novedades" class="seccion">
+        <h2>Promociones de la Semana</h2>
+        <ul>
+          <li>🍅 Tomate perita: 2 kg por $500</li>
+          <li>🥩 Asado de novillo: $2.999 el kilo</li>
+          <li>🥚 Docena de huevos caseros: $850</li>
+          <li>🧼 2x1 en detergentes marca Barrio Limpio</li>
+          <li>🍞 Pan casero: 3x2 en todas las variedades</li>
+        </ul>
+        <p>Promociones válidas hasta el domingo o hasta agotar stock. ¡Aprovechá y llená tu bolsita de barrio!</p>
+      </section>
+      
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MercadoBarrial Bosa.</p>
+    <p>Made by Daniela.P - Juan.V</p>
+  </footer>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
